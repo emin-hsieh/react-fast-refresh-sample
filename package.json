@@ -1,0 +1,8 @@
+{
+  "name": "admin-web",
+  "version": "1.0.0",
+  "description": "cdn admin web site",
+  "main": "index.js",
+  "author": "Emin Hsieh",
+  "license": "MIT"
+}
