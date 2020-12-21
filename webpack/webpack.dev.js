@@ -1,24 +1,20 @@
 const { merge } = require('webpack-merge');
-const webpack = require('webpack');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+const cfg = require('./webpack.config.js');
 
-const config = require('./webpack.config.js');
-
-const devConfig = {
+const devCfg = {
   mode: 'development',
-  entry: ['react-hot-loader/patch', './index.js'],
+  entry: ['./index.js'],
   devtool: 'eval',
-  resolve: {
-    alias: { 'react-dom': '@hot-loader/react-dom' }
-  },
   devServer: {
     hot: true,
     open: 'Google Chrome'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-  ]
+    new ReactRefreshWebpackPlugin()
+  ],
 }
 
-module.exports = merge(devConfig, config);
+module.exports = merge(devCfg, cfg);
 
 

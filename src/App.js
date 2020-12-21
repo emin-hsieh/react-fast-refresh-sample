@@ -1,5 +1,3 @@
 import React from 'react';
-
-const App = () => <div>TESTSETST1212312312</div>
-// export default hot(App);
+const App = () => <div>TESTS3</div>;
 export default App;
